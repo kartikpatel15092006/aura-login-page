@@ -1,13 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { LoginCard } from "@/components/LoginCard";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <main className="relative min-h-screen flex items-center justify-center p-4 md:p-8">
+      <AnimatedBackground />
+      
+      {/* Main content */}
+      <div className="relative z-10 w-full flex flex-col items-center">
+        <LoginCard />
+        
+        {/* Bottom branding */}
+        <p className="mt-8 text-xs text-muted-foreground/50 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
+          Secured with end-to-end encryption
+        </p>
       </div>
-    </div>
+    </main>
   );
 };
 
